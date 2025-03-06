@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: cornsilk;
+}
+
+.is-hidden {
+  display: none;
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  left: -250px; /* 初期状態では画面外 */
+  width: 250px;
+  height: 100vh;
+  background: #666666;
+  color: white;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+}
+
+#menu.active {
+  transform: translateX(250px);
+}
+
+#list {
+  list-style: none;
+}
+
+.color-text {
+  display: flex;
+  align-items: center;
+  font-size:20px;
+  cursor: pointer;
+}
+
+.color-circle {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.color-circle[data-color="default"] {
+  background-color: gold;
+}
+
+.color-circle[data-color="red"] {
+  background-color: red;
+}
+
+.color-circle[data-color="turquoise"] {
+  background-color: #00b7ce;
+}
+
+.color-circle[data-color="dark"] {
+  background-color: #223a70;
+}
+
+.color-circle[data-color="lightblue"] {
+  background-color: #65BBE9;
+}
+
+.color-circle[data-color="lightgreen"] {
+  background-color: #90ee90;
+}
+
+.color-circle[data-color="purple"] {
+  background-color: #a260bf;
+}
+
+.color-circle[data-color="white"] {
+  background-color: white;
+}
+
+#close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-decoration: none;
+  font-size: 24px;
+  color: white;
+}
+
+#konsuta {
+  height: 500px;
+  display: flex;
+  justify-content: space-evenly; 
+}
+
+#roller{
+  padding-top: 5px;
+  width: 100px;
+  height: 50px;
+  background-color: gold;
+  border-radius: 0 0 100px 100px;
+  font-size: 30px;
+  text-align: center;
+}
+
+#timer {
+  width: 300px;
+  /* margin-top: 50px;  */
+  text-align: center;
+}
+
+.select-container {
+  font-size: 24px;
+  display: flex;
+  font-family: 'ＭＳ Ｐゴシック';
+  height: 50px;
+  width: 230px;
+  border-radius: 5px;
+  border-width: 3px;
+  border-color: gold;
+  background-color: snow;
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-bottom: 5px;
+  transition: border-color 0.3s;
+}
+
+#select-min,
+#select-sec {
+  font-size: 24px;
+  font-family: 'ＭＳ Ｐゴシック';
+  height: 50px;
+  width: 230px;
+  border-radius: 5px;
+  border-width: 3px;
+  border-color: gold;
+  background-color: snow;
+  margin-bottom: 5px;
+}
+
+#select-min,
+#select-sec:focus {
+  outline: 0;
+}
+
+.timefont{
+  color: black;
+  background-color: cornsilk;
+}
+
+#time-pass {
+  color: black;
+  font-size: 150px;
+  font-family: 'ＭＳ Ｐゴシック';
+}
+
+#start-btn,
+#stop-btn,
+#reset-btn {
+  font-family: 'ＭＳ Ｐゴシック';
+  height: 50px;
+  width: 100px;
+  border-radius: 5px;
+  border-width: 3px;
+  border-color: gold;
+  background-color: snow;
+}
+
+#end-text {
+  margin-left: 10px;
+  font-family: 'ＭＳ Ｐゴシック';
+  font-size: 40px;
+  color: red;
+}
+
+#start-text {
+  margin-left: 10px;
+  font-family: 'ＭＳ Ｐゴシック';
+  font-size: 40px;
+  color: orange;
+}
+
+#memo {
+  /* margin-top: 10px; */
+  margin-left: 50px;
+  border: 3px solid gold;
+  background-color: snow;
+  background-image: url(konchan2.png);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center center;
+  border-radius: 10px;
+  font-size: 28px;
+  font-family: 'ＭＳ Ｐゴシック';
+  outline: none;
+  transition: border-color 0.3s;
+}
